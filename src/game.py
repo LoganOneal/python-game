@@ -6,7 +6,8 @@ from colors import Colors
 import pygame, sys
 
 
-class Game():
+
+class Game(object):
     def __init__(self):
         width = 1080
         height = 720
@@ -18,10 +19,10 @@ class Game():
         pygame.init()
         self.window = pygame.display.set_mode((width, height, 0, 32))
 
-    def drawScene(self, scene):
+    def drawScene(self):
         pygame.draw.rect(self.window, Colors.blue, (200, 100, 150, 50))
 
-    def play():
+    def play(self):
         self.drawScene()
         while True:
             for event in pygame.event.get():
@@ -35,4 +36,5 @@ class Game():
 
 
 if __name__ == "__main__":
-    play()
+    game = Game
+    Game.play(Game)
